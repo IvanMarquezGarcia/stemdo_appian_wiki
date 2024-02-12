@@ -1,92 +1,262 @@
-<aside class="sidebar" id="sidebar-1" style="background-color: lightgray; padding: 20px; width: 20%">
-    <ul class="ml-4">
-        <li class="mt-2">Documentación
-            <ul class="ml-4">
-                <li>Lenguaje
-                    <ul class="ml-4">
-                        <li>Tipos de datos</li>
-                        <li>Variables locales</li>
-                        <li>Rule inputs</li>
-                        <li>Constantes</li>
-                        <li>Funciones frecuentes</li>
-                      </ul>
-                </li>
-                <li>Grupos y seguridad
-                    <ul class="ml-4">
-                        <li>Práctica</li>
-                    </ul>
-                </li>
-                <li>Rule expressions
-                    <ul class="ml-4">
-                        <li>Editor de expresiones
-                            <ul class="ml-4">
-                                <li>Sección de testeo</li>
-                                <li>Sección de rule inputs</li>
-                            </ul>
-                        </li>
-                        <li>Queries
-                            <ul class="ml-4">
-                                <li>Queries a RecordTypes</li>
-                                <li>Queries a Data Store Entity</li>
-                            </ul>
-                        </li>
-                        <li>Práctica</li>
-                    </ul>
-                </li>
-                <li>Data Store Entity</li>
-                <li>Custom Data Type (CDT)
-                    <ul class="ml-4">
-                        <li>Práctica</li>
-                    </ul>
-                </li>
-                <li>RecordType
-                    <ul class="ml-4">
-                        <li>Práctica</li>
-                    </ul>
-                </li>
-                <li>Interfaces
-                    <ul class="ml-4">
-                        <li>Editor de interfaces</li>
-                        <li>Design mode</li>
-                        <li>Expression mode</li>
-                        <li>Ejercicio resuelto: Hola Mundo</li>
-                        <li>función a!save</li>
-                        <li>Testeo de la interfaz</li>
-                        <li>Componentes más utilizados</li>
-                        <li>ReadOnly Grid</li>
-                        <li>Práctica</li>
-                    </ul>
-                </li>
-                <li>Informes: gráficos y cuadrículas</li>
-                <li>Modelos de proceso
-                    <ul class="ml-4">
-                        <li>Diseño de procesos avanzados</li>
-                        <li>Práctica</li>
-                    </ul>
-                </li>
-                <li>Sites
-                    <ul class="ml-4">
-                        <li>Práctica</li>
-                    </ul>
-                </li>
-                <li>SQL: procedimientos almacenados y vistas
-                    <ul class="ml-4">
-                        <li>Práctica</li>
-                    </ul>
-                </li>
-                <li>Integraciones con APIs</li>
-                <li>RPA</li>
-                <li>Control de versiones</li>
-                <li>Ejercicio final</li>
-            </ul>
-        </li>
-        <li class="mt-2">Actualizaciones
-          <ul class="ml-4">
-            <li>Versión 23.2</li>
-            <li>Versión 23.3</li>
-            <li>Versión 23.4</li>
-          </ul>
-        </li>
-        <li class="mt-2">Certificación</li>
-      </ul>
+<script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
+
+<button data-drawer-target="sidebar-multi-level-sidebar" data-drawer-toggle="sidebar-multi-level-sidebar" aria-controls="sidebar-multi-level-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ms-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+    <span class="sr-only">Menú</span>
+    <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+    	<path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
+    </svg>
+</button>
+
+<aside id="sidebar-multi-level-sidebar" class="fixed top-0 left-0 z-40 w-1/4 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+    <div class="h-full px-3 py-4 overflow-y-auto bg-stemdo-blue-original dark:bg-stemdo-blue-lightB">
+        <ul class="space-y-2 font-medium">
+            <li>
+                <button type="button" class="flex items-center w-full p-2 pl-0 text-base transition duration-75 rounded-lg group text-white dark:text-white hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB" aria-controls="dropdown-docs" data-collapse-toggle="dropdown-docs">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Documentación</span>
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                    </svg>
+                </button>
+                <ul id="dropdown-docs" class="hidden py-2 space-y-2">
+					<li class="ml-5">
+						<button type="button" class="flex items-center w-full p-2 pl-0 text-base transition duration-75 rounded-lg group text-white dark:text-white hover:bg-gray-100 hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB" aria-controls="dropdown-language" data-collapse-toggle="dropdown-language">
+							<span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Lenguaje</span>
+							<svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+							</svg>
+						</button>
+						<ul id="dropdown-language" class="py-2 space-y-2">
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Tipos de datos</a>
+							</li>
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Variables locales</a>
+							</li>
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Rule inputs</a>
+							</li>
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Constantes</a>
+							</li>
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Funciones frecuentes</a>
+							</li>
+						</ul>
+					</li>
+					<li class="ml-5">
+						<button type="button" class="flex items-center w-full p-2 pl-0 text-base transition duration-75 rounded-lg group text-white dark:text-white hover:bg-gray-100 hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB" aria-controls="dropdown-groups-security" data-collapse-toggle="dropdown-groups-security">
+							<span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Grupos y seguridad</span>
+							<svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+							</svg>
+						</button>
+						<ul id="dropdown-groups-security" class="hidden py-2 space-y-2">
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Práctica</a>
+							</li>
+						</ul>
+					</li>
+
+
+					<li class="ml-5">
+						<button type="button" class="flex items-center w-full p-2 pl-0 text-base transition duration-75 rounded-lg group text-white dark:text-white hover:bg-gray-100 hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB" aria-controls="dropdown-rule-expressions" data-collapse-toggle="dropdown-rule-expressions">
+							<span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Rule Expressions</span>
+							<svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+							</svg>
+						</button>
+						<ul id="dropdown-rule-expressions" class="hidden py-2 space-y-2">
+							<li class="ml-5">
+								<button type="button" class="flex items-center w-full p-2 pl-0 text-base transition duration-75 rounded-lg group text-white dark:text-white hover:bg-gray-100 hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB" aria-controls="dropdown-expressions-editor" data-collapse-toggle="dropdown-expressions-editor">
+									<span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Editor de expresiones</span>
+									<svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+										<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+									</svg>
+								</button>
+								<ul id="dropdown-expressions-editor" class="hidden py-2 space-y-2">
+									<li class="pl-8">
+										<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Sección de testeo</a>
+									</li>
+									<li class="pl-8">
+										<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Sección de rule inputs</a>
+									</li>
+								</ul>
+							</li>
+							<li class="ml-5">
+								<button type="button" class="flex items-center w-full p-2 pl-0 text-base transition duration-75 rounded-lg group text-white dark:text-white hover:bg-gray-100 hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB" aria-controls="dropdown-queries" data-collapse-toggle="dropdown-queries">
+									<span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Queries</span>
+									<svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+										<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+									</svg>
+								</button>
+								<ul id="dropdown-queries" class="hidden py-2 space-y-2">
+									<li class="pl-8">
+										<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Consultas a Record Types</a>
+									</li>
+									<li class="pl-8">
+										<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Consultas a Data Store Entities</a>
+									</li>
+								</ul>
+							</li>
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Práctica</a>
+							</li>
+						</ul>
+					</li>
+
+
+					<li class="pl-6">
+						<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Data Store Entity</a>
+					</li>
+
+
+					<li class="ml-5">
+						<button type="button" class="flex items-center w-full p-2 pl-0 text-base transition duration-75 rounded-lg group text-white dark:text-white hover:bg-gray-100 hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB" aria-controls="dropdown-cdt" data-collapse-toggle="dropdown-cdt">
+							<span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Custom Data Type (CDT)</span>
+							<svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+							</svg>
+						</button>
+						<ul id="dropdown-cdt" class="hidden py-2 space-y-2">
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Práctica</a>
+							</li>
+						</ul>
+					</li>
+					<li class="ml-5">
+						<button type="button" class="flex items-center w-full p-2 pl-0 text-base transition duration-75 rounded-lg group text-white dark:text-white hover:bg-gray-100 hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB" aria-controls="dropdown-record-type" data-collapse-toggle="dropdown-record-type">
+							<span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Record Type</span>
+							<svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+							</svg>
+						</button>
+						<ul id="dropdown-record-type" class="hidden py-2 space-y-2">
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Práctica</a>
+							</li>
+						</ul>
+					</li>
+					<li class="ml-5">
+						<button type="button" class="flex items-center w-full p-2 pl-0 text-base transition duration-75 rounded-lg group text-white dark:text-white hover:bg-gray-100 hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB" aria-controls="dropdown-interfaces" data-collapse-toggle="dropdown-interfaces">
+							<span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Interfaces</span>
+							<svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+							</svg>
+						</button>
+						<ul id="dropdown-interfaces" class="hidden py-2 space-y-2">
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Editor de interfaces</a>
+							</li>
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Design mode</a>
+							</li>
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Expression mode</a>
+							</li>
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Ejercicio resuelto: Hola mundo</a>
+							</li>
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Función a!save</a>
+							</li>
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Testeo de la interfaz</a>
+							</li>
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Componentes más utilizados</a>
+							</li>
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Read-only grids</a>
+							</li>
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Práctica</a>
+							</li>
+						</ul>
+					</li>
+					<li class="pl-6">
+						<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Informes: Gráficos y cuadrículas</a>
+					</li>
+					<li class="ml-5">
+						<button type="button" class="flex items-center w-full p-2 pl-0 text-base transition duration-75 rounded-lg group text-white dark:text-white hover:bg-gray-100 hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB" aria-controls="dropdown-process-models" data-collapse-toggle="dropdown-process-models">
+							<span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Modelos de proceso</span>
+							<svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+							</svg>
+						</button>
+						<ul id="dropdown-process-models" class="hidden py-2 space-y-2">
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Advanced process design</a>
+							</li>
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Práctica</a>
+							</li>
+						</ul>
+					</li>
+					<li class="ml-5">
+						<button type="button" class="flex items-center w-full p-2 pl-0 text-base transition duration-75 rounded-lg group text-white dark:text-white hover:bg-gray-100 hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB" aria-controls="dropdown-sites" data-collapse-toggle="dropdown-sites">
+							<span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Sites</span>
+							<svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+							</svg>
+						</button>
+						<ul id="dropdown-sites" class="hidden py-2 space-y-2">
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Práctica</a>
+							</li>
+						</ul>
+					</li>
+					<li class="ml-5">
+						<button type="button" class="flex items-center w-full p-2 pl-0 text-base transition duration-75 rounded-lg group text-white dark:text-white hover:bg-gray-100 hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB" aria-controls="dropdown-sql" data-collapse-toggle="dropdown-sql">
+							<span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">SQL: Store procedures y vistas</span>
+							<svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+							</svg>
+						</button>
+						<ul id="dropdown-sql" class="hidden py-2 space-y-2">
+							<li class="pl-6">
+								<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Práctica</a>
+							</li>
+						</ul>
+					</li>
+					<li class="pl-6">
+						<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Integraciones con API</a>
+					</li>
+					<li class="pl-6">
+						<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Robotic Process Automation (RPA)</a>
+					</li>
+					<li class="pl-6">
+						<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Control de versiones</a>
+					</li>
+					<li class="pl-6">
+						<a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">Ejercicio final</a>
+					</li>
+                </ul>
+            </li>
+
+            <li class="">
+                <button type="button" class="flex items-center w-full p-2 pl-0 text-base transition duration-75 rounded-lg group text-white dark:text-white hover:bg-gray-100 hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB" aria-controls="dropdown-updates" data-collapse-toggle="dropdown-updates">
+                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Actualizaciones</span>
+                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                    </svg>
+                </button>
+                <ul id="dropdown-updates" class="hidden py-2 space-y-2">
+                    <li>
+                       <a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg pl-11 group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">23.2</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg pl-11 group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">23.3</a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center w-full p-2 text-white transition duration-75 rounded-lg pl-11 group hover:bg-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-lightB">23.4</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="flex items-center p-2 pl-0 text-white hover:text-stemdo-blue-original dark:hover:text-stemdo-blue-light rounded-lg hover:bg-white dark:hover:bg-stemdo-blue-light group">
+                    <span class="ms-3">Certificación</span>
+                </a>
+            </li>
+       </ul>
+    </div>
 </aside>

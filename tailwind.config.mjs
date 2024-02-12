@@ -9,24 +9,40 @@ export default {
 		extend: {
 			colors: {
 				'stemdo-blue': {
-					light: '#8680ff',
+					lightA: '#b6b3ff',
+					lightB: '#8680ff',
+					lightC: '#554dff',
 					original: '#4237FF',
-					dark: '#0d00ff'
+					darkA: '#251aff',
+					darkB: '#0b00e6',
+					darkC: '#0900b3'
 				},
 				'stemdo-purple': {
-					light: '#b699ff',
+					lightA: '#ede6ff',
+					lightB: '#c8b3ff',
+					lightC: '#a480ff',
 					original: '#8859FF',
-					dark: '#5b1aff'
+					darkA: '#6d33ff',
+					darkB: '#4800ff',
+					darkC: '#3a00cc'
 				},
 				'stemdo-red': {
-					light: '#f35961',
+					lightA: '#f8a0a5',
+					lightB: '#f47177',
+					lightC: '#f1414a',
 					original: '#EF2630',
-					dark: '#be0e17'
+					darkA: '#d5101a',
+					darkB: '#a60c14',
+					darkC: '#77090e'
 				},
 				'stemdo-green': {
-					light: '00ffea',
+					lightA: '#4dfff0',
+					lightB: '#1affec',
+					lightC: '#00e6d2',
 					original: '#00C2B1',
-					dark: '#008075'
+					darkA: '#00998c',
+					darkB: '#00665e',
+					darkC: '#00332f'
 				},
 			  },
 		},
